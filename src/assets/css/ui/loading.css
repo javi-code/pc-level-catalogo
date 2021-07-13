@@ -1,0 +1,38 @@
+/* LOADIN */
+.loading-item{
+   border-radius: 5px;
+ }
+ .loading-item{
+   background-color: var(--color-bg-one);
+   padding: .8rem;
+}
+.loading-item .one{
+   width: 60%
+}
+.loading-item .two{
+   width: 88%
+}
+.loading-item .tre{
+   width: 40%
+}
+.ld--text{
+   height: 10px;
+   margin-top: .6rem
+}
+.ld--title{
+   height: 15px;
+   width: 80%;
+   margin-bottom: 1rem
+}
+.ld--text,
+.ld--title{
+   animation: placeHolder 1.5s linear infinite forwards;
+   background: #f6f7f8;
+   background: linear-gradient(to right, #eeeeee 8%, #dddddd 18%, #eeeeee 33%);
+   background-size: 800px 104px;
+   position: relative;
+}
+@keyframes placeHolder {
+  0%{ background-position: -468px 0; }
+  100%{ background-position: 468px 0; }
+}

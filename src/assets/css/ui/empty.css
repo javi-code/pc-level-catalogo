@@ -1,0 +1,10 @@
+.box-empty{
+   padding: 2rem;
+   flex-direction: column;
+   opacity: .6;
+   color: #9090e8;
+}
+.box-empty i{
+   font-size: 5rem;
+   margin: 1rem 0;
+}
