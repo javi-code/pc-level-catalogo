@@ -1,13 +1,13 @@
 <template>
    <div class="wrapp section">
-      <LoadingVue v-if="$apollo.loading"/>
-      <div v-else>
+      <div>
          <h1 class="color-one">Categorias</h1>
-         <div class="grid-categoria">
-            <div v-for="categoria in categorias" :key="categoria.id" class="card item-categoria">
+         <LoadingVue v-if="$apollo.loading"/>
+         <div v-else class="grid-categoria">
+            <router-link v-for="categoria in categorias"  :to="{name:'productos', query:{idC:categoria.id}}" :key="categoria.id" class="card item-categoria">
                <img :src="categoria.imagen">
                <p class="text-center text-bold">{{categoria.nombre}}</p>
-            </div>
+            </router-link>
          </div>
       </div>
    </div>

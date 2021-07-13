@@ -7,7 +7,7 @@
                   <img src="~@/assets/img/logo.png">
                </router-link>
             </div>
-            <ul class="flex flex-center-ai">
+            <ol class="flex flex-center-ai">
                <li>
                   <router-link :to="{name:'inicio'}" class="item-menu">
                      Inicio
@@ -28,7 +28,7 @@
                   Contacto
                   </router-link>
                </li>
-            </ul>
+            </ol>
          </nav>
       </div>
    </header>

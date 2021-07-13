@@ -8,11 +8,10 @@ mutation MyMutation($mensaje: String, $nombre: String, $whatsapp: numeric) {
 }`
 
 export const REG_VENTA = gql`
-mutation MyMutation($stock: Int, $id: Int!, $cantidad: numeric, $cliente: String, $cliente_whatsapp: numeric, $fecha: timestamp, $monto: numeric, $producto_id: Int) {
-   update_pc_productos_by_pk(pk_columns: {id: $id}, _set: {stock: $stock}) {
-      id
-   }
-   insert_pc_ventas_one(object: {cliente: $cliente, cantidad: $cantidad, cliente_whatsapp: $cliente_whatsapp, fecha: $fecha, monto: $monto, producto_id: $producto_id}) {
-     id
+mutation MyMutation($objects: [pc_ventas_insert_input!]! ) {
+   insert_pc_ventas(objects: $objects) {
+     returning {
+       id
+     }
    }
 }`

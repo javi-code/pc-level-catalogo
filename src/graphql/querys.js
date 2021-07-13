@@ -9,7 +9,7 @@ export const LIST_CATEGORIAS = gql`{
 }`
 
 export const LIST_PRODUCTOS = gql`{
-   productos:pc_productos{
+   allProducts:pc_productos(where: {estado: {_eq: true}}){
       id
       imagen
       nombre
@@ -23,6 +23,26 @@ export const LIST_PRODUCTOS = gql`{
       }
    }
 }`
+export const LIST_PRODUCTOS_BY = gql`
+query MyQuery($_eq: Int!){
+   pc_productos(where: {
+      categoria_id: {_eq: $_eq},
+      estado: {_eq: true}
+      }){
+      id
+      imagen
+      nombre
+      stock
+      precio
+      estado
+      descripcion
+      caracteristicas
+      categoria {
+         nombre
+      }
+   }
+}`
+
 export const PRODUCTO = gql`
 query MyQuery($id: Int!) {
    producto:pc_productos_by_pk(id: $id) {

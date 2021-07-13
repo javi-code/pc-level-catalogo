@@ -2,7 +2,7 @@
    <div class="wrapp">
       <div class="section">
          <div class="grid-6-6">
-            <div>mapa</div>
+            <div><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d120703.33515346133!2d-65.32983265807611!3d-19.020637159608548!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x93fbc8bc8187832f%3A0xbd9df259af1bee96!2sSucre!5e0!3m2!1ses!2sbo!4v1626209896760!5m2!1ses!2sbo" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe></div>
             <div class="card">
                <form @submit.prevent="sendData">
                   <h4 class="text-center">Envianos tus dudas o consultas</h4>

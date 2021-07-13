@@ -34,8 +34,7 @@ body{
    background-color: var(--color-bg-two);
    color: var(--color-text-one);
 }
-
-li{
+ol li{
    list-style: none;
 }
 button{
@@ -99,7 +98,7 @@ button[type=submit]:disabled{
 }
 .grid-productos{
    grid-gap: 1rem;
-   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+   grid-template-columns: repeat(auto-fit, minmax(260px, 300px));
 }
 .grid-6-6{
    grid-template-columns: 6fr 6fr;
@@ -228,4 +227,19 @@ button[type=submit]:disabled{
 }
 ::-webkit-scrollbar-thumb:hover {
    background: #696969;
+}
+@media (max-width: 580px){
+   .grid-6-6{
+      grid-template-columns: 1fr;
+   }
+   .item-menu{
+      font-size: .7rem;
+   }
+   .wrapp{
+      padding: 0 .4rem;
+   }
+   .logo-c img{
+      width: 30px;
+      height: 30px;
+   }
 }
