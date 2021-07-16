@@ -228,6 +228,7 @@ button[type=submit]:disabled{
 ::-webkit-scrollbar-thumb:hover {
    background: #696969;
 }
+
 @media (max-width: 580px){
    .grid-6-6{
       grid-template-columns: 1fr;
@@ -241,5 +242,21 @@ button[type=submit]:disabled{
    .logo-c img{
       width: 30px;
       height: 30px;
+   }
+   .grid-categoria {
+      grid-gap: .8rem;
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+   }
+   .grid-productos {
+      grid-gap: .8rem;
+      grid-template-columns: 1fr;
+   }
+}
+@media (max-width: 480px){
+   .image-inicio{
+      display: none;
+   }
+   .text-inicio{
+      width: 100% !important;
    }
 }

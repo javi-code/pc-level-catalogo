@@ -79,7 +79,10 @@
    width: 100%;
    padding: .8rem;
 }
-
+.item-productos img{
+   min-height: 180px;
+   object-fit: cover;
+}
 footer{
    background-color: var(--color-two);
    padding: 5rem 0;

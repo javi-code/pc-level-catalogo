@@ -14,7 +14,7 @@
          </div>
          <div class="item-input">
             <BotonVue type="submit" 
-               :name="sending ? 'Reservando...  ':'Enviar consulta'" class="btn-success"/>
+               :name="sending ? 'Reservando...  ':'Finalizar reserva'" class="btn-success"/>
          </div>
      </form>
   </div>
