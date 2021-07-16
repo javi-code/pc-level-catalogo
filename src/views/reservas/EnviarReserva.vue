@@ -1,9 +1,9 @@
 <template>
 <div>
    <div v-if="smsSend" class="empty--list">{{smsSend}}</div>
-  <div v-else class="form-reserva">
-     <p>Ingresa tus datos para realizar una reserva</p>
-     <form @submit.prevent="sendData">
+   <div v-else class="form-reserva">
+      <p>Ingresa tus datos para realizar una reserva</p>
+      <form @submit.prevent="sendData">
         <div class="item-input">
             <label>Nombre</label>
             <input type="text" v-model="cliente" required>
@@ -16,15 +16,15 @@
             <BotonVue type="submit" 
                :name="sending ? 'Reservando...  ':'Finalizar reserva'" class="btn-success"/>
          </div>
-     </form>
-  </div>
+      </form>
+   </div>
 </div>
 </template>
 
 <script>
 import BotonVue from '../../components/ui/Boton.vue'
 import {REG_VENTA} from '@/graphql/mutations'
-import {currentDateHour} from '@/shared/utils'
+import {currentDate} from '@/shared/utils'
 export default {
    components:{
       BotonVue
@@ -44,7 +44,7 @@ export default {
                cantidad: 1,
                producto_id: el.id,
                monto: parseFloat( el.precio ),
-               fecha: currentDateHour(),
+               fecha: currentDate(),
                precompra:true,
                cliente:this.cliente,
                cliente_whatsapp: parseInt( this.cliente_whatsapp ),
@@ -54,9 +54,8 @@ export default {
       }
    },
    methods:{
-       sendData(){
+      sendData(){
          this.sending=true
-         console.log( this.ventas );
          this.$apollo.mutate({
             mutation: REG_VENTA,
             variables: {
