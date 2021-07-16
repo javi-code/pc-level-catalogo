@@ -24,7 +24,7 @@
 <script>
 import BotonVue from '../../components/ui/Boton.vue'
 import {REG_VENTA} from '@/graphql/mutations'
-import {currentDate} from '@/shared/utils'
+import {currentDate, currentDateHour} from '@/shared/utils'
 export default {
    components:{
       BotonVue
@@ -45,6 +45,7 @@ export default {
                producto_id: el.id,
                monto: parseFloat( el.precio ),
                fecha: currentDate(),
+               fecha_hora: currentDateHour(),
                precompra:true,
                cliente:this.cliente,
                cliente_whatsapp: parseInt( this.cliente_whatsapp ),
